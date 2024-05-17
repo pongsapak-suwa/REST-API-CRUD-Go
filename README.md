@@ -1,5 +1,7 @@
 # Go Fiber REST API with User Authentication
 
+![image](https://github.com/pongsapak-suwa/REST-API-CRUD-Go/assets/94011063/330730f4-37f6-46df-8c6c-50232e20d054)
+
 This is a simple REST API built with Go Fiber framework, Gorm ORM, and JWT for user authentication.
 
 ## Features
