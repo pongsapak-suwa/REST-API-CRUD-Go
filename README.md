@@ -24,7 +24,7 @@ Before running the application, make sure you have the following installed:
 
     ```bash
     git clone https://github.com/pongsapak-suwa/REST-API-CRUD-Go.git
-    cd your_project
+    cd REST-API-CRUD-Go
     ```
 
 2. Install dependencies:
