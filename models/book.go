@@ -1,7 +1,11 @@
 package models
 
+import (
+	"gorm.io/gorm"
+)
+
 type Book struct {
-	ID     uint `gorm:"primaryKey"`
+	gorm.Model
 	Title  string
 	Author string
 }

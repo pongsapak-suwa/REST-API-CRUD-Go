@@ -20,10 +20,15 @@ func Connect() {
 	dbname := os.Getenv("DB_NAME")
 
 	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8mb4&parseTime=True&loc=Local", username, password, host, port, dbname)
-	DB, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
+	
+	var err error
+	DB, err = gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
 		log.Fatalf("Failed to connect to database: %v", err)
 	}
 
-	DB.AutoMigrate(&models.Book{})
+	err = DB.AutoMigrate(&models.Book{},&models.User{})
+	if err != nil {
+		log.Fatalf("Failed to migrate database: %v", err)
+	}
 }

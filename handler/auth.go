@@ -43,7 +43,6 @@ func Login(c *fiber.Ctx) error {
         return c.Status(fiber.StatusUnauthorized).JSON(fiber.Map{"error": "Invalid username or password"})
     }
 
-    // Create JWT token
     expirationTime := time.Now().Add(24 * time.Hour)
     claims := &utils.Claims{
         Username: user.Username,
